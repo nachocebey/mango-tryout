@@ -1,0 +1,43 @@
+.range {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+}
+.track {
+  position: relative;
+  flex: 1;
+  height: 4px;
+  background: #d0d5dd;
+  border-radius: 2px;
+}
+.fill {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: #1d2939;
+  border-radius: 2px;
+}
+
+.handle {
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: black;
+  transform: translate(-50%, -50%);
+  cursor: grab;
+  touch-action: none;
+}
+.handle:hover {
+  transform: translate(-50%, -50%) scale(1.3);
+}
+.handle[data-dragging="true"] {
+  cursor: grabbing;
+  transform: translate(-50%, -50%) scale(1.3);
+}
+
+input.label { width: 4rem; }
+
